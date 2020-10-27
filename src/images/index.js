@@ -1,3 +1,5 @@
-export { default as edit } from "./edit-img.png";
-export { default as headphones } from "./headphones.png";
-export { default as delete } from "./delete.png";
+import edit from "./edit-img.png";
+import headphones from "./headphones.png";
+import deletePicture from "./delete.png";
+
+export { edit, headphones, deletePicture };
