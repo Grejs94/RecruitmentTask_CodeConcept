@@ -6,11 +6,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
-  min-width: 100vh;
-  padding: 80px 30px;
-}
-
 .titlesWrapper {
   display: flex;
   align-items: center;
@@ -21,14 +16,6 @@ body {
 .title_shoppingCard {
   margin: 0;
   font-size: 22px;
-}
-.mainWrapper {
-  display: flex;
-}
-
-.shoppingCard_container {
-  flex: 10;
-  border: 1px solid gray;
 }
 
 .shoppingCard_topBarInfoContainer {
