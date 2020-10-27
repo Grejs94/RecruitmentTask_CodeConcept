@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import * as Styles from "./styles";
 import {
   setSubTotal,
   setShipping,
@@ -20,19 +21,18 @@ const BottomRow = () => {
   };
 
   return (
-    <div className="shoppingCard_BottomBarHandleContainer">
-      <div className="shoppingCard_element_first shoppingCard_element_first--bottomBar"></div>
-      <div className="shoppingCard_element_second shoppingCard_element_second--bottomBar"></div>
-      <div className="shoppingCard_element_third shoppingCard_element_third--bottomBar"></div>
-      <div className="shoppingCard_element_fourth shoppingCard_element_fourth--bottomBar">
-        <button
+    <Styles.Wrapper>
+      <Styles.PictureCell />
+      <Styles.NameCell />
+      <Styles.UnitCell />
+      <Styles.ButtonsCell>
+        <Styles.Button
           onClick={() => handleUpdateShoppingCard({ value, unitPrice })}
-          className="button_root button_small"
         >
           Update Shopping Card
-        </button>
-      </div>
-    </div>
+        </Styles.Button>
+      </Styles.ButtonsCell>
+    </Styles.Wrapper>
   );
 };
 
