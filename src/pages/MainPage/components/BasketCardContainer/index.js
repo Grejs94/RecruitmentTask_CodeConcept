@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { InfoRow, CardRow, BottomRow } from "./components";
+import { InfoRow, CardElement, BottomRow } from "./components";
 import * as Styles from "./styles";
 import { selectBasketVisible } from "features/basket/basketSlice";
 
@@ -15,7 +15,7 @@ const BasketCard = () => {
           <Styles.ElementInfo>Shopping Card</Styles.ElementInfo>
           <Styles.Container>
             <InfoRow />
-            <CardRow />
+            <CardElement />
             <BottomRow />
           </Styles.Container>
         </>

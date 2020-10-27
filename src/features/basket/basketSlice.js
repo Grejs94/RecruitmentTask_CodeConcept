@@ -4,6 +4,7 @@ export const basketSlice = createSlice({
   name: "basket",
   initialState: {
     itemValue: 2,
+    lastItemValue: 5,
     unitPrice: 11.9,
     subtotal: 35.7,
     shipping: 23.8,
@@ -22,6 +23,9 @@ export const basketSlice = createSlice({
     setItemValue: (state, action) => {
       state.itemValue = action.payload;
     },
+    setLastItemValue: (state, action) => {
+      state.lastItemValue = action.payload;
+    },
     setSubTotal: (state, action) => {
       state.subtotal = action.payload;
     },
@@ -38,12 +42,14 @@ export const {
   increseValue,
   decreseValue,
   setItemValue,
+  setLastItemValue,
   setSubTotal,
   setShipping,
   setBasketVisible,
 } = basketSlice.actions;
 
 export const selectBasketItemValue = (state) => state.basket.itemValue;
+export const selectBasketLastItemValue = (state) => state.basket.lastItemValue;
 export const selectBasketUnitPrice = (state) => state.basket.unitPrice;
 export const selectBasketSubtotal = (state) => state.basket.subtotal;
 export const selectBasketShipping = (state) => state.basket.shipping;

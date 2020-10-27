@@ -29,43 +29,42 @@ const BasketProceedContainer = () => {
     toast.success("Your order has been submitted successfully!");
   };
 
+  // Styles.ShippingContainer
+  // Styles.BasketSumaryContainer
+  // Styles.SumaryTitle
+  // Styles.BasketContent
+  // Styles.DescriptionContainer
+  // Styles.SubmitButton
   return (
     <Styles.Wrapper>
       <Styles.ButtonContainer>
         <Styles.Button>Proceed to checkout</Styles.Button>
       </Styles.ButtonContainer>
 
-      <div>
-        <div className="info_Container">
-          <span>SHIPPING</span>
-          <span>{`$${shipping}`}</span>
-        </div>
-      </div>
-      <div className="basketSummary">
-        <div className="info_Container info_Container--totals">
+      <Styles.ShippingContainer>
+        <span>SHIPPING</span>
+        <span>{`$${shipping}`}</span>
+      </Styles.ShippingContainer>
+      <Styles.BasketSumaryContainer>
+        <Styles.SumaryTitle>
           <span>CARD TOTALS</span>
-        </div>
-        <div className="basketContent">
-          <div className="description">
-            <div className="description_itemContainer">
-              <div>Subtotal</div>
-              <div>${roundedValue([subtotal])}</div>
-            </div>
-            <div className="description_itemContainer description_itemContainer--last">
-              <div>Grand Total</div>
-              <div>${roundedValue([subtotal, shipping])}</div>
-            </div>
-          </div>
-        </div>
-        <div className="basketBottomBarContainer">
-          <button
-            onClick={() => handleProceedToCheckout()}
-            className="button_root button_small button--basket"
-          >
+        </Styles.SumaryTitle>
+        <Styles.BasketContent>
+          <Styles.DescriptionContainer>
+            <div>Subtotal</div>
+            <div>${roundedValue([subtotal])}</div>
+          </Styles.DescriptionContainer>
+          <Styles.DescriptionContainerGrand>
+            <div>Grand Total</div>
+            <div>${roundedValue([subtotal, shipping])}</div>
+          </Styles.DescriptionContainerGrand>
+        </Styles.BasketContent>
+        <Styles.SubmitButtonContainer>
+          <Styles.SubmitButton onClick={() => handleProceedToCheckout()}>
             Proceed to checkout
-          </button>
-        </div>
-      </div>
+          </Styles.SubmitButton>
+        </Styles.SubmitButtonContainer>
+      </Styles.BasketSumaryContainer>
     </Styles.Wrapper>
   );
 };
