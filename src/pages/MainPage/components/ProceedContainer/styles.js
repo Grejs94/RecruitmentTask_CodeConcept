@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding-top: 60px;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: yellow;
 
   @media (max-width: 800px) {
-    display: flex;
-    justify-content: center;
-    background: red;
+    margin: 0;
   }
 `;

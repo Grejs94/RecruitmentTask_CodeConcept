@@ -2,15 +2,16 @@ import React from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import * as Styles from "./styles";
 import { MainPage } from "pages";
 
 toast.configure();
 
 function App() {
   return (
-    <div className="App">
+    <Styles.Wrapper>
       <MainPage />
-    </div>
+    </Styles.Wrapper>
   );
 }
 
