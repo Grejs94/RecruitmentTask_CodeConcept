@@ -1,7 +1,7 @@
 import React from "react";
 import { useTable } from "react-table";
 
-import { createItemsList } from "./MakeData";
+import { ItemsList } from "./MakeData";
 import * as Styles from "./styles";
 
 function Table({ columns, data }) {
@@ -10,6 +10,7 @@ function Table({ columns, data }) {
     getTableProps,
     getTableBodyProps,
     headerGroups,
+    footerGroups,
     rows,
     prepareRow,
   } = useTable({
@@ -41,6 +42,15 @@ function Table({ columns, data }) {
           );
         })}
       </tbody>
+      <tfoot>
+        {footerGroups.map((group) => (
+          <tr {...group.getFooterGroupProps()}>
+            {group.headers.map((column) => (
+              <td {...column.getFooterProps()}>{column.render("Footer")}</td>
+            ))}
+          </tr>
+        ))}
+      </tfoot>
     </table>
   );
 }
@@ -49,34 +59,33 @@ const TableComponent = () => {
   const columns = React.useMemo(
     () => [
       {
-        Header: "Name1",
+        Header: "",
         accessor: "deleteIcon",
       },
       {
-        Header: "Name2",
+        Header: "",
         accessor: "productPicture",
       },
       {
-        Header: "Name3",
+        Header: "Product Name",
         accessor: "name",
       },
       {
-        Header: "Name4",
+        Header: "Unit Price",
         accessor: "price",
       },
       {
-        Header: "Name5",
+        Header: "Qty",
         accessor: "icons",
-        Footer: "Age",
+        Footer: "Qty",
       },
     ],
     []
   );
 
-  // console.log(createItemsList);
   return (
     <Styles.Wrapper>
-      <Table columns={columns} data={createItemsList} />
+      <Table columns={columns} data={ItemsList} />
     </Styles.Wrapper>
   );
 };

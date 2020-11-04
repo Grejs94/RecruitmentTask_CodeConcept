@@ -13,7 +13,7 @@ const dataItems = [
   },
 ];
 
-export const createItemsList = [...dataItems].map((dataItem) => {
+export const ItemsList = [...dataItems].map((dataItem) => {
   return {
     deleteIcon: <img src={image.deletePicture} alt="deleteIcon" />,
     productPicture: <img src={dataItem.picture} alt={dataItem.name} />,
@@ -25,4 +25,4 @@ export const createItemsList = [...dataItems].map((dataItem) => {
   };
 });
 
-console.log(createItemsList);
+console.log(ItemsList);
