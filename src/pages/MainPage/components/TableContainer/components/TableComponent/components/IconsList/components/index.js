@@ -1,3 +1,3 @@
-import ChangeValue from "./ChangeValue";
+import BoxValue from "./BoxValue";
 
-export { ChangeValue };
+export { BoxValue };

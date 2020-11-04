@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Table, Shipping } from "./components";
+import * as Styles from "./styles";
 
 const SumaryContainer = () => {
   return (
-    <div>
+    <Styles.Wrapper>
       <Shipping />
       <Table />
-    </div>
+    </Styles.Wrapper>
   );
 };
 

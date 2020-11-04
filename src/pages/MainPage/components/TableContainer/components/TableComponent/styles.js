@@ -1,16 +1,40 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding: 1rem;
+  margin-top: 35px;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 
   table {
-    border-spacing: 0;
     border: 1px solid black;
+    padding: 0 10px;
 
-    tr {
-      :last-child {
+    @media (max-width: 800px) {
+      margin: 0 auto;
+    }
+
+    tbody {
+      tr {
+        th,
         td {
-          border-bottom: 0;
+          border-top: 1px solid black;
+        }
+
+        :last-child {
+          th,
+          td {
+            border-bottom: 1px solid black;
+          }
+        }
+
+        @media (max-width: 600px) {
+          th,
+          td:nth-child(2) {
+            max-width: 90px;
+          }
         }
       }
     }
@@ -19,12 +43,17 @@ export const Wrapper = styled.div`
     td {
       margin: 0;
       padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      text-align: center;
 
-      :last-child {
-        border-right: 0;
+      @media (max-width: 800px) {
+        padding: 2px;
       }
     }
   }
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
 `;
