@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Table } from "./components";
+import { TableComponent } from "./components";
 import * as Styles from "./styles";
 
 const TableContainer = () => {
   return (
     <Styles.Wrapper>
       <Styles.TableTitle>Shopping Card</Styles.TableTitle>
-      <Table />
+      <TableComponent />
     </Styles.Wrapper>
   );
 };
