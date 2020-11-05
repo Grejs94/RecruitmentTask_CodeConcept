@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 240px;
   margin: 0;
   padding: 0 30px 0 15px;
   background-color: yellow;
@@ -11,7 +10,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 200px;
-    margin: 30px 0;
+    margin: 30px auto;
     padding: 0 30px;
   }
 `;
@@ -21,7 +20,8 @@ export const ButtonWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-export default {
-  Wrapper,
-  ButtonWrapper,
-};
+export const inlineButtonsStyles = (theme) => ({
+  root: {
+    fontSize: 12,
+  },
+});

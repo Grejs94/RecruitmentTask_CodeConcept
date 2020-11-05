@@ -2,13 +2,17 @@ import React from "react";
 
 import { Button } from "components";
 import { SumaryContainer } from "./components";
-import { default as Styles } from "./styles";
+import * as Styles from "./styles";
 
 const ProceedContainer = () => {
   return (
     <Styles.Wrapper>
       <Styles.ButtonWrapper>
-        <Button variant="contained" color="primary" nostyles="true">
+        <Button
+          variant="contained"
+          color="primary"
+          customstyles={Styles.inlineButtonsStyles}
+        >
           Proceed to checkout
         </Button>
       </Styles.ButtonWrapper>

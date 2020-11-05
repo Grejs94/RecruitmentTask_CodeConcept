@@ -1,4 +1,4 @@
 import Shipping from "./Shipping";
-import Table from "./Table";
+import SumaryBody from "./SumaryBody";
 
-export { Shipping, Table };
+export { Shipping, SumaryBody };

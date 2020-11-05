@@ -18,6 +18,8 @@ function Table({ columns, data }) {
     data,
   });
 
+  console.log(useTable);
+
   // Render the UI for your table
   return (
     <table {...getTableProps()}>
@@ -70,6 +72,7 @@ const TableComponent = () => {
         Header: "Product Name",
         accessor: "name",
       },
+
       {
         Header: "Unit Price",
         accessor: "price",

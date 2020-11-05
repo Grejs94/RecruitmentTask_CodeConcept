@@ -2,13 +2,13 @@ import React from "react";
 
 import * as Styles from "./styles";
 
-const Shipping = () => {
+const TableItem = ({ text, value }) => {
   return (
     <Styles.Wrapper>
-      <span>Shipping</span>
-      <span>$92</span>
+      <span>{text}</span>
+      <span>{value}</span>
     </Styles.Wrapper>
   );
 };
 
-export default Shipping;
+export default TableItem;

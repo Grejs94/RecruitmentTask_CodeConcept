@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Button } from "components";
 import { IconsList } from "./components";
 import * as image from "images";
 import * as Styles from "./styles";
@@ -16,7 +17,11 @@ const dataItems = [
 
 export const ItemsList = [...dataItems].map((dataItem) => {
   return {
-    deleteIcon: <Styles.Img src={image.deletePicture} alt="deleteIcon" />,
+    deleteIcon: (
+      <Button variant="contained" color="primary">
+        &times;
+      </Button>
+    ),
     productPicture: <Styles.Img src={dataItem.picture} alt={dataItem.name} />,
     name: dataItem.name,
     price: dataItem.price,
