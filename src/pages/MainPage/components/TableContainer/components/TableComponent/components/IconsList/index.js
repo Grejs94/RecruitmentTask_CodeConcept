@@ -9,20 +9,6 @@ const handleClick = () => {
   console.log("klik");
 };
 
-const styles = {
-  root: {
-    background: "yellow",
-    borderRadius: 6,
-    border: 0,
-    color: "white",
-    padding: 0,
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-  },
-  label: {
-    textTransform: "capitalize",
-  },
-};
-
 const IconsList = ({ value }) => {
   return (
     <Styles.Wrapper>

@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const basketSlice = createSlice({
   name: "basket",
-  initialState: {},
-  reducers: {},
+  initialState: {
+    status: "iddle",
+  },
+  // reducers: {},
 });
 
-export const {} = basketSlice.actions;
+// export const {} = basketSlice.actions;
 
 export const selectBasket = (state) => state.basket;
 
