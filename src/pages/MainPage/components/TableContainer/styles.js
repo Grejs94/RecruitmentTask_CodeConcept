@@ -10,7 +10,6 @@ export const TableTitle = styled.p`
 
 export const Wrapper = styled.div`
   margin: 0;
-  background: gray;
   padding: 0 15px 0 30px;
 
   @media (max-width: 800px) {

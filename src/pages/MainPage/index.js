@@ -1,5 +1,4 @@
 import React from "react";
-
 import { ProceedContainer, TableContainer } from "./components";
 import * as Styles from "./styles";
 

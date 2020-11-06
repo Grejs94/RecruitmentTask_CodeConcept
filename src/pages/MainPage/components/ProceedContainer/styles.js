@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   margin: 0;
   padding: 0 30px 0 15px;
-  background-color: yellow;
   width: 200px;
 
   @media (max-width: 800px) {
