@@ -80,7 +80,6 @@ const TableComponent = () => {
       {
         Header: "Qty",
         accessor: "icons",
-        Footer: "Qty",
       },
     ],
     []

@@ -15,7 +15,7 @@ const TableBodyContainer = () => {
         nostyles="true"
         customstyles={Styles.ButtonInlineStyles}
       >
-        Proceed To Checkout
+        Buy and pay
       </Button>
     </Styles.Wrapper>
   );

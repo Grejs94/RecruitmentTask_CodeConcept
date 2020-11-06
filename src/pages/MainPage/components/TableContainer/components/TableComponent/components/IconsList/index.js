@@ -29,7 +29,9 @@ const IconsList = ({ value }) => {
       <Button handleClick={handleClick} color="primary" variant="contained">
         -
       </Button>
-      <BoxValue>{value}</BoxValue>
+      <BoxValue>
+        <p>{value}</p>
+      </BoxValue>
       <Button handleClick={handleClick} color="primary" variant="contained">
         +
       </Button>

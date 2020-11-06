@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 600px) {
     font-size: 10px;
+    padding: 0px;
   }
 
   img {
