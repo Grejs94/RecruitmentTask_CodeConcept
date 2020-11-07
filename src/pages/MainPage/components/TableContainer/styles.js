@@ -17,3 +17,8 @@ export const Wrapper = styled.div`
     padding: 0;
   }
 `;
+
+export const MessageContainer = styled.div`
+  padding: 20px;
+  border: 1px solid black;
+`;

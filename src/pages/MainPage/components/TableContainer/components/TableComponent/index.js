@@ -85,7 +85,7 @@ const TableComponent = () => {
 
   return (
     <Styles.Wrapper>
-      <Table columns={columns} data={ItemsList} />
+      <Table columns={columns} data={ItemsList()} />
     </Styles.Wrapper>
   );
 };
