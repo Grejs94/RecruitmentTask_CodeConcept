@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding-top: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 16px;
 
   @media (max-width: 800px) {
-    display: block;
+    font-size: 14px;
   }
 `;
