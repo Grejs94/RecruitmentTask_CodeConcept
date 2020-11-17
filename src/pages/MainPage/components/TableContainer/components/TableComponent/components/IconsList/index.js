@@ -23,7 +23,12 @@ const IconsList = ({ value, id }) => {
 
   return (
     <Styles.Wrapper>
-      <Button handleClick={handleDecrement} color="primary" variant="contained">
+      <Button
+        handleClick={handleDecrement}
+        color="primary"
+        customVariant="short"
+        variant="contained"
+      >
         -
       </Button>
       <Styles.Input
@@ -34,6 +39,7 @@ const IconsList = ({ value, id }) => {
         handleClick={() => dispatch(incrementValue(id))}
         color="primary"
         variant="contained"
+        customVariant="short"
       >
         +
       </Button>

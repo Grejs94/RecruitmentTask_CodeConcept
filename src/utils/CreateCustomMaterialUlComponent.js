@@ -3,16 +3,12 @@ import { withStyles } from "@material-ui/core/styles";
 
 export default function CreateCustomMaterialUlInput({
   styles,
-  customstyles,
   element,
   children,
   handleClick,
-  nostyles,
   ...rest
 }) {
-  const StyledElement = withStyles(
-    customstyles ? customstyles : nostyles ? {} : styles
-  )(element);
+  const StyledElement = withStyles(styles)(element);
 
   return (
     <StyledElement onClick={handleClick} {...rest}>

@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+import { theme } from "assets/theme";
+
+const { media, css } = theme;
+
 export const Wrapper = styled.div`
-  @media (min-width: 500px) {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+
+  ${media.sm} {
+    display: block;
   }
 `;
 
@@ -16,8 +22,10 @@ export const Input = styled.input`
   height: 25px;
   border: none;
   padding: 0;
+  ${css.md_text}
 
-  @media (max-width: 500px) {
+  ${media.sm} {
     margin: 0 auto;
+    ${css.xs_text}
   }
 `;

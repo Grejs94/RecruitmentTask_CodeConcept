@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
+import { theme } from "assets/theme";
+
+const { media, css, colors } = theme;
+
 export const Wrapper = styled.div`
   margin-top: 35px;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid ${colors.black};
+  ${css.md_text}
 
-  @media (max-width: 800px) {
+  ${media.md} {
     /* This is required to make the table full-width */
     display: block;
     max-width: 100%;
@@ -19,13 +24,13 @@ export const Wrapper = styled.div`
       border-bottom: 1px solid black;
     }
 
-    font-size: 14px;
+    ${css.md_text}
     display: flex;
     justify-content: center;
   }
 
-  @media (max-width: 600px) {
-    font-size: 10px;
+  ${media.sm} {
+    ${css.xs_text}
     padding: 0px;
   }
 
@@ -33,7 +38,7 @@ export const Wrapper = styled.div`
     max-width: 140px;
     margin: 0 auto;
 
-    @media (max-width: 800px) {
+    ${media.md} {
       max-width: 100px;
     }
   }
@@ -51,16 +56,16 @@ export const Wrapper = styled.div`
 
     tbody {
       tr {
-        border-top: 1px solid black;
+        border-top: 1px solid ${colors.black};
 
         :last-child {
           th,
           td {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid ${colors.black};
           }
         }
 
-        @media (max-width: 600px) {
+        ${media.sm} {
           th,
           td {
             padding: 4px;

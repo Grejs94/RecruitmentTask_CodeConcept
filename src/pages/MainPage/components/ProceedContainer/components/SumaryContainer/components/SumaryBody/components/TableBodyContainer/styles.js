@@ -1,25 +1,22 @@
 import styled from "styled-components";
 
+import { theme } from "assets/theme";
+
+const { media, css, colors } = theme;
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid ${colors.black};
   border-top: none;
   padding: 10px;
 
   div:first-child {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid ${colors.black};
   }
 
-  @media (max-width: 800px) {
-    font-size: 14px;
+  ${media.md} {
+    ${css.md_text}
   }
 `;
-
-export const ButtonInlineStyles = (theme) => ({
-  root: {
-    fontSize: 10,
-    marginTop: 10,
-  },
-});

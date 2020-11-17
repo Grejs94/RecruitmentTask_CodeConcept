@@ -1,10 +1,12 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import grey from "@material-ui/core/colors/grey";
+
+import { colors, media, css, themeCss } from "./variables";
 
 export const theme = {
-  colors: {
-    ligthGray: grey[400],
-  },
+  colors,
+  media,
+  css,
+  themeCss,
 };
 
 export const themeMaterial = createMuiTheme(theme);

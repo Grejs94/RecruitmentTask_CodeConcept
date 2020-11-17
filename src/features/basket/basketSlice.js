@@ -1,35 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import * as image from "images";
+import { createSelector } from "reselect";
+
+import { initialState } from "./data";
 
 export const basketSlice = createSlice({
   name: "basket",
-  initialState: {
-    status: "iddle",
-    items: [
-      {
-        picture: image.headphones,
-        name: "Headphones",
-        price: 11.9,
-        id: 0,
-        value: 2,
-      },
-      {
-        picture: image.mobilePhone,
-        name: "Mobile phone",
-        price: 20.99,
-        id: 1,
-        value: 1,
-      },
-    ],
-    shipping: 23.8,
-    subtotal: 0,
-    grandTotal: 0,
-  },
+  initialState: initialState,
   reducers: {
     deleteItem: (state, action) => {
-      state.items = [...state.items].filter(
-        (item) => item.id !== action.payload
-      );
+      state.items = state.items.filter((item) => item.id !== action.payload);
     },
     setSubtotal: (state, action) => {
       state.subtotal = action.payload;
@@ -45,7 +24,7 @@ export const basketSlice = createSlice({
         return;
       }
 
-      state.items = [...state.items].map((item) => ({
+      state.items = state.items.map((item) => ({
         ...item,
         value:
           item.id === action.payload.id
@@ -54,13 +33,13 @@ export const basketSlice = createSlice({
       }));
     },
     incrementValue: (state, action) => {
-      state.items = [...state.items].map((item) => ({
+      state.items = state.items.map((item) => ({
         ...item,
         value: item.id === action.payload ? item.value + 1 : item.value,
       }));
     },
     decrementValue: (state, action) => {
-      state.items = [...state.items].map((item) => ({
+      state.items = state.items.map((item) => ({
         ...item,
         value: item.id === action.payload ? item.value - 1 : item.value,
       }));
@@ -79,5 +58,30 @@ export const {
 } = basketSlice.actions;
 
 export const selectBasket = (state) => state.basket;
+export const selectBasketShippingValue = (state) =>
+  state.basket.shipping.toFixed(2);
+
+// Reselect selectors
+
+export const selectBasketSubtotal = createSelector(
+  selectBasket,
+  (basketItems) =>
+    basketItems.items.reduce((acc, item) => acc + item.price * item.value, 0)
+);
+
+export const selectBasketShipping = createSelector(
+  selectBasketSubtotal,
+  (subtotal) => {
+    if (subtotal === 0) {
+      return 0;
+    }
+
+    if (subtotal <= 100) {
+      return 23.8;
+    }
+
+    return 0;
+  }
+);
 
 export default basketSlice.reducer;

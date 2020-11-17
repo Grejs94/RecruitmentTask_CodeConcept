@@ -6,12 +6,12 @@ import { TableComponent } from "./components";
 import * as Styles from "./styles";
 
 const TableContainer = () => {
-  const basket = useSelector(selectBasket);
+  const { items } = useSelector(selectBasket);
 
   return (
     <Styles.Wrapper>
       <Styles.TableTitle>Shopping Card</Styles.TableTitle>
-      {basket.items.length > 0 ? (
+      {items.length > 0 ? (
         <TableComponent />
       ) : (
         <Styles.MessageContainer>

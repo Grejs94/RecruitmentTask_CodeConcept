@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { selectBasket } from "features/basket/basketSlice";
+
 import * as Styles from "./styles";
 
 const Shipping = () => {
