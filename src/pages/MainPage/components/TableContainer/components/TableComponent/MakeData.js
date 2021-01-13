@@ -1,31 +1,48 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { deleteItem, selectBasket } from "features/basket/basketSlice";
+import { basketProducts, deleteItem } from "features/shoppingPage/shoppingPage";
 import { Button } from "components";
 import { IconsList } from "./components";
 import * as Styles from "./styles";
+import { headphones } from "images/index";
 
 export const ItemsList = () => {
   const dispatch = useDispatch();
 
-  const dataItems = useSelector(selectBasket);
-  return [...dataItems.items].map((dataItem) => ({
+  const products = useSelector(basketProducts);
+
+  const selectImage = (id) => {
+    switch (id) {
+      case 1:
+        return headphones;
+
+      default:
+        break;
+    }
+  };
+  // try to do this better when finish
+
+  const handleDelete = (id) => {
+    dispatch(deleteItem(id));
+  };
+
+  return [...products].map((basketItem) => ({
     deleteIcon: (
       <Button
         variant="contained"
         color="primary"
-        onClick={() => dispatch(deleteItem(dataItem.id))}
+        onClick={() => handleDelete(basketItem.id)}
         customVariant="short"
       >
         &times;
       </Button>
     ),
-    productPicture: <Styles.Img src={dataItem.picture} alt={dataItem.name} />,
-    name: dataItem.name,
-    price: dataItem.price,
-    icons: <IconsList id={dataItem.id} value={dataItem.value} />,
-    id: dataItem.id,
-    value: dataItem.value,
+    productPicture: (
+      <Styles.Img src={selectImage(basketItem.id)} alt={basketItem.name} />
+    ),
+    name: basketItem.name,
+    price: basketItem.price,
+    icons: <IconsList id={basketItem.id} value={basketItem.quantity} />,
   }));
 };

@@ -5,8 +5,8 @@ import * as Styles from "./styles";
 const TableItem = ({ text, value }) => {
   return (
     <Styles.Wrapper>
-      <span>{text}</span>
-      <span>{value}</span>
+      <Styles.Text>{text}</Styles.Text>
+      <Styles.Value>{value}</Styles.Value>
     </Styles.Wrapper>
   );
 };

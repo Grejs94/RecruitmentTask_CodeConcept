@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { basketSlice } from "features";
+import { shoppingPage } from "features";
 
 export default configureStore({
   reducer: {
-    basket: basketSlice,
+    shoppingPage,
   },
 });

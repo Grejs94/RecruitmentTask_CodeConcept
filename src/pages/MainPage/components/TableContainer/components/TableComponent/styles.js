@@ -5,10 +5,10 @@ import { theme } from "assets/theme";
 const { media, css, colors } = theme;
 
 export const Wrapper = styled.div`
-  margin-top: 35px;
   padding: 20px;
-  border: 1px solid ${colors.black};
+  border: 1px solid ${colors.ligthGrey_300};
   ${css.md_text}
+  ${css.boxShadow_normal}
 
   ${media.md} {
     /* This is required to make the table full-width */
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
       max-width: 100%;
       overflow-x: scroll;
       overflow-y: hidden;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid ${colors.ligthGrey_300};
     }
 
     ${css.md_text}
@@ -56,12 +56,13 @@ export const Wrapper = styled.div`
 
     tbody {
       tr {
-        border-top: 1px solid ${colors.black};
+        border-top: 1px solid ${colors.ligthGrey_500};
+        color: ${colors.ligthGrey_500};
 
         :last-child {
           th,
           td {
-            border-bottom: 1px solid ${colors.black};
+            border-bottom: 1px solid ${colors.ligthGrey_500};
           }
         }
 
@@ -76,6 +77,12 @@ export const Wrapper = styled.div`
             max-width: 150px;
           }
         }
+      }
+    }
+
+    thead {
+      th {
+        color: ${colors.ligthGrey_500};
       }
     }
 

@@ -1,3 +1,3 @@
-import basketSlice from "./basket";
+import shoppingPage from "./shoppingPage";
 
-export { basketSlice };
+export { shoppingPage };

@@ -6,7 +6,9 @@ import * as Styles from "./styles";
 const SumaryContainer = () => {
   return (
     <Styles.Wrapper>
-      <Shipping />
+      <Styles.ShippingContainer>
+        <Shipping />
+      </Styles.ShippingContainer>
       <SumaryBody />
     </Styles.Wrapper>
   );

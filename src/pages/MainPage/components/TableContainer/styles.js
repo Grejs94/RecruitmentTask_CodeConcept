@@ -5,11 +5,16 @@ import { theme } from "assets/theme";
 const { media, css, colors } = theme;
 
 export const TableTitle = styled.p`
-  margin-top: 10px;
-
+  margin: 0;
+  font-size: 20px;
+  color: ${colors.ligthGrey_500};
   ${media.md} {
     text-align: center;
   }
+`;
+
+export const TableTitleContainer = styled.div`
+  min-height: 60px;
 `;
 
 export const Wrapper = styled.div`

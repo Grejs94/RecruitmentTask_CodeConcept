@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { theme } from "assets/theme";
 
-const { media, css } = theme;
+const { media, css, colors } = theme;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -22,9 +22,8 @@ export const Input = styled.input`
   height: 25px;
   border: none;
   padding: 0;
-  ${css.md_text}
-
-  ${media.sm} {
+  color: ${colors.ligthGrey_500};
+  ${css.md_text} ${media.sm} {
     margin: 0 auto;
     ${css.xs_text}
   }

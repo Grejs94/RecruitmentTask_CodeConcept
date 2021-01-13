@@ -1,12 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
+// import // incrementValue,
+// // decrementValue,
+// // deleteItem,
+// // setValue,
+// "features/basket/basketSlice";
+
 import {
   incrementValue,
   decrementValue,
-  deleteItem,
   setValue,
-} from "features/basket/basketSlice";
+} from "features/shoppingPage/shoppingPage";
 import { Button } from "components";
 import * as Styles from "./styles";
 
@@ -15,7 +20,7 @@ const IconsList = ({ value, id }) => {
 
   const handleDecrement = () => {
     if (value === 1) {
-      dispatch(deleteItem(id));
+      return;
     }
 
     dispatch(decrementValue(id));

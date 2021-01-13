@@ -17,9 +17,12 @@ export const themeCss = {
 export const css = {
   xs_text: `font-size: ${themeCss.xs_text};`,
   md_text: `font-size: ${themeCss.md_text};`,
+  boxShadow_normal: `box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.18);`,
 };
 
 export const colors = {
   black: "black",
-  ligthGrey: grey[400],
+  ligthGrey_300: grey[300],
+  ligthGrey_500: grey[500],
+  ligthGrey_700: grey[700],
 };

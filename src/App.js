@@ -23,5 +23,3 @@ function App() {
 }
 
 export default App;
-
-// przeszukać i zamienić wszytkie media i color black; white
